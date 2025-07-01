@@ -96,10 +96,14 @@ section, #depoimentos, .carrossel {
   width: 100vw;
   max-width: none;
   margin: 2rem 0;
-  background: #fff;
+  background: transparent;
   border-radius: 0;
   box-shadow: 0 2px 12px #0001;
   padding: 0;
+}
+#depoimentos {
+  background: transparent;
+  box-shadow: none;
 }
 .section-container {
   max-width: 700px;
@@ -217,7 +221,7 @@ footer {
   margin-top: 1.2rem;
 }
 .card-depoimento {
-  background: #e3f2e1;
+  background: #e3f2e1cc;
   border-radius: 1rem;
   box-shadow: 0 2px 8px #0001;
   padding: 1.2rem 1rem;
