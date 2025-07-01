@@ -1,3 +1,4 @@
+import React from "react";
 import Image from "next/image";
 
 const services = [
@@ -61,7 +62,7 @@ export default function Home() {
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
           <h1 className="text-4xl sm:text-6xl font-bold text-white drop-shadow-lg mb-4">NaturLu</h1>
           <h2 className="text-xl sm:text-2xl text-emerald-100 font-medium mb-6 drop-shadow">O caminho da transformação</h2>
-          <a href="#contato" className="inline-block bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-8 py-3 rounded-full shadow-lg transition">Agende sua consulta</a>
+          <a href="#contato" className="inline-block bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-8 py-3 rounded-full shadow-lg transition">Agende a sua consulta</a>
         </div>
       </section>
 
@@ -105,12 +106,12 @@ export default function Home() {
         </div>
       </section>
 
-      {/* DEPOIMENTOS */}
+      {/* DEPOIMENTOS (sem Swiper) */}
       <section className="py-16 px-4 bg-emerald-50">
         <h3 className="text-3xl font-bold text-emerald-800 text-center mb-10">O que dizem os nossos clientes</h3>
-        <div className="max-w-4xl mx-auto grid md:grid-cols-3 gap-8">
+        <div className="max-w-2xl mx-auto grid gap-6">
           {testimonials.map((t, i) => (
-            <div key={i} className="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center text-center">
+            <div key={i} className="bg-white rounded-2xl shadow-lg p-8 flex flex-col items-center text-center">
               <svg className="w-8 h-8 text-emerald-400 mb-2" fill="currentColor" viewBox="0 0 24 24"><path d="M7.17 6.17A7.001 7.001 0 0 0 2 13a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1c0-1.306.835-2.417 2.17-2.83A3.001 3.001 0 0 1 12 7a3 3 0 0 1 2.83 3.17C17.165 10.583 18 11.694 18 13a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1c0-3.866-3.134-7-7-7a7.001 7.001 0 0 0-6.83 6.17z" /></svg>
               <p className="text-gray-700 text-base mb-4">"{t.text}"</p>
               <span className="text-emerald-700 font-semibold">{t.name}</span>
