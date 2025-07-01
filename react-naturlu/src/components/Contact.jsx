@@ -7,10 +7,10 @@ export default function Contact() {
         <h2>Contato</h2>
         <p>Entre em contato pelo email: <a href="mailto:geral@naturlu.pt">geral@naturlu.pt</a></p>
         <p>Ou pelo WhatsApp/telemóvel: <a href="https://wa.me/351913537133" target="_blank" rel="noopener">+351 913 537 133</a></p>
-        <form action="mailto:geral@naturlu.pt" method="POST" encType="text/plain">
-          <input type="text" placeholder="Nome" name="Nome" required />
-          <input type="email" placeholder="Email" name="Email" required />
-          <textarea placeholder="Mensagem" name="Mensagem" required></textarea>
+        <form action="https://formsubmit.co/geral@naturlu.pt" method="POST">
+          <input type="text" name="Nome" placeholder="Nome" required />
+          <input type="email" name="Email" placeholder="Email" required />
+          <textarea name="Mensagem" placeholder="Mensagem" required></textarea>
           <button type="submit">Enviar</button>
         </form>
         <div className="mapa-localizacao">
