@@ -1,9 +1,12 @@
-name: Deploy Next.js
+name: Deploy to GitHub Pages
 
 on:
   push:
     branches:
       - main
+
+permissions:
+  contents: write
 
 jobs:
   build-and-deploy:
@@ -20,12 +23,13 @@ jobs:
       - name: Instalar dependências
         run: npm install
 
-      - name: Build do projeto
-        run: npm run build
+      - name: Build estático do Next.js
+        run: |
+          npm run build
+          npm run export
 
-      # Exemplo para Vercel CLI (requer token VERCEL_TOKEN como secret)
-      - name: Deploy para Vercel
-        run: npx vercel --prod --token ${{ secrets.VERCEL_TOKEN }}
-        env:
-          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
-          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }} 
+      - name: Deploy para GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./out 
