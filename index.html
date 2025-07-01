@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Naturopatia Viva</title>
+  <title>NaturLu. O caminho da transformação.</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <h1>Naturopatia Viva</h1>
+    <h1>NaturLu. O caminho da transformação.</h1>
     <nav>
       <a href="#sobre">Sobre</a>
       <a href="#beneficios">Benefícios</a>
@@ -54,15 +54,16 @@
   </section>
   <section id="contato">
     <h2>Contato</h2>
-    <form>
-      <input type="text" placeholder="Nome" required>
-      <input type="email" placeholder="Email" required>
-      <textarea placeholder="Mensagem" required></textarea>
+    <p>Entre em contato pelo email: <a href="mailto:geral@naturlu.pt">geral@naturlu.pt</a></p>
+    <form action="mailto:geral@naturlu.pt" method="POST" enctype="text/plain">
+      <input type="text" placeholder="Nome" name="Nome" required>
+      <input type="email" placeholder="Email" name="Email" required>
+      <textarea placeholder="Mensagem" name="Mensagem" required></textarea>
       <button type="submit">Enviar</button>
     </form>
   </section>
   <footer>
-    <p>&copy; 2024 Naturopatia Viva. Todos os direitos reservados.</p>
+    <p>&copy; 2024 NaturLu. O caminho da transformação. Todos os direitos reservados.</p>
   </footer>
   <script src="script.js"></script>
 </body>
