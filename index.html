@@ -5,10 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NaturLu. O caminho da transformação.</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
-    <h1>NaturLu. O caminho da transformação.</h1>
+    <h1 class="titulo-naturlu">NaturLu. <span>O caminho da transformação.</span></h1>
     <nav>
       <a href="#sobre">Sobre</a>
       <a href="#beneficios">Benefícios</a>
@@ -45,12 +46,28 @@
   </section>
   <section id="servicos">
     <h2>Serviços</h2>
-    <ul>
-      <li>Consulta Naturopática</li>
-      <li>Fitoterapia</li>
-      <li>Aromaterapia</li>
-      <li>Massagem Terapêutica</li>
-    </ul>
+    <div class="servicos-cards">
+      <div class="card-servico">
+        <div class="icon-servico">🌱</div>
+        <h3>Consulta Naturopática</h3>
+        <p>Avaliação holística e orientação personalizada para o seu bem-estar.</p>
+      </div>
+      <div class="card-servico">
+        <div class="icon-servico">🌿</div>
+        <h3>Fitoterapia</h3>
+        <p>Uso terapêutico de plantas medicinais para promover a saúde natural.</p>
+      </div>
+      <div class="card-servico">
+        <div class="icon-servico">🍃</div>
+        <h3>Aromaterapia</h3>
+        <p>Óleos essenciais para equilíbrio físico, mental e emocional.</p>
+      </div>
+      <div class="card-servico">
+        <div class="icon-servico">💆‍♀️</div>
+        <h3>Massagem Terapêutica</h3>
+        <p>Técnicas naturais para relaxamento, alívio de dores e revitalização.</p>
+      </div>
+    </div>
   </section>
   <section id="contato">
     <h2>Contato</h2>
@@ -62,8 +79,32 @@
       <button type="submit">Enviar</button>
     </form>
   </section>
+  <section id="depoimentos">
+    <h2>Depoimentos</h2>
+    <div class="depoimentos-cards">
+      <div class="card-depoimento">
+        <p>"Senti uma transformação incrível na minha saúde e energia!"</p>
+        <span>- Ana S.</span>
+      </div>
+      <div class="card-depoimento">
+        <p>"A atenção e o cuidado fizeram toda a diferença no meu bem-estar."</p>
+        <span>- João M.</span>
+      </div>
+      <div class="card-depoimento">
+        <p>"Recomendo a NaturLu a todos que buscam equilíbrio natural."</p>
+        <span>- Carla P.</span>
+      </div>
+    </div>
+  </section>
   <footer>
-    <p>&copy; 2024 NaturLu. O caminho da transformação. Todos os direitos reservados.</p>
+    <div class="footer-content">
+      <p>&copy; 2024 NaturLu. O caminho da transformação. Todos os direitos reservados.</p>
+      <div class="footer-social">
+        <a href="#" title="Instagram" class="social-icon">&#x1F33F;</a>
+        <a href="#" title="Facebook" class="social-icon">&#x1F426;</a>
+        <a href="#" title="WhatsApp" class="social-icon">&#x1F4F1;</a>
+      </div>
+    </div>
   </footer>
   <script src="script.js"></script>
 </body>

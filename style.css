@@ -1,5 +1,5 @@
 body {
-  font-family: 'Segoe UI', Arial, sans-serif;
+  font-family: 'Montserrat', Arial, sans-serif;
   margin: 0;
   background: linear-gradient(135deg, #e3f2e1 0%, #f6f8f4 40%, #e6e0c3 100%);
   color: #2e4d36;
@@ -143,6 +143,112 @@ footer {
   font-size: 1rem;
   line-height: 1.3;
 }
+.titulo-naturlu {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.3rem;
+  color: #2e4d36;
+  margin: 0;
+  letter-spacing: 1px;
+  line-height: 1.1;
+  word-break: break-word;
+}
+.titulo-naturlu span {
+  display: block;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 1.1rem;
+  color: #7bbf6a;
+  margin-top: 0.2em;
+}
+.servicos-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+.card-servico {
+  background: #f6f8f4cc;
+  border-radius: 1rem;
+  box-shadow: 0 2px 12px #0001;
+  padding: 1.5rem 1.2rem;
+  width: 220px;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+  border: 1.5px solid #e3f2e1;
+}
+.card-servico:hover {
+  transform: translateY(-7px) scale(1.04);
+  box-shadow: 0 6px 24px #0002;
+  border-color: #7bbf6a;
+}
+.icon-servico {
+  font-size: 2.2rem;
+  margin-bottom: 0.7rem;
+}
+.card-servico h3 {
+  margin: 0.5rem 0 0.3rem 0;
+  color: #3a6b4b;
+  font-size: 1.2rem;
+}
+.card-servico p {
+  font-size: 1rem;
+  color: #2e4d36cc;
+}
+/* Depoimentos */
+#depoimentos {
+  max-width: 700px;
+  margin: 2rem auto;
+  background: #fff9;
+  border-radius: 1rem;
+  box-shadow: 0 2px 12px #0001;
+  padding: 2rem;
+}
+.depoimentos-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: 1.2rem;
+}
+.card-depoimento {
+  background: #e3f2e1;
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px #0001;
+  padding: 1.2rem 1rem;
+  width: 210px;
+  text-align: center;
+  font-style: italic;
+  color: #2e4d36;
+  border: 1.5px solid #cbe7c2;
+}
+.card-depoimento span {
+  display: block;
+  margin-top: 0.7rem;
+  font-style: normal;
+  color: #3a6b4b;
+  font-size: 0.98rem;
+}
+/* Footer social */
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.7rem;
+}
+.footer-social {
+  margin-top: 0.5rem;
+}
+.social-icon {
+  font-size: 1.5rem;
+  margin: 0 0.4rem;
+  color: #3a6b4b;
+  text-decoration: none;
+  transition: color 0.2s, transform 0.2s;
+}
+.social-icon:hover {
+  color: #7bbf6a;
+  transform: scale(1.2);
+}
 @media (max-width: 800px) {
   section, .carrossel {
     max-width: 98vw;
@@ -152,6 +258,17 @@ footer {
     height: 200px;
   }
   header h1 {
+    font-size: 1.3rem;
+  }
+  .servicos-cards, .depoimentos-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  .card-servico, .card-depoimento {
+    width: 95vw;
+    max-width: 320px;
+  }
+  .titulo-naturlu {
     font-size: 1.3rem;
   }
 } 
