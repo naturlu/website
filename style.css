@@ -92,13 +92,19 @@ nav a:hover {
 .dot.active {
   background: #7bbf6a;
 }
-section {
-  max-width: 700px;
-  margin: 2rem auto;
+section, #depoimentos, .carrossel {
+  width: 100vw;
+  max-width: none;
+  margin: 2rem 0;
   background: #fff;
-  border-radius: 1rem;
+  border-radius: 0;
   box-shadow: 0 2px 12px #0001;
-  padding: 2rem;
+  padding: 0;
+}
+.section-container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
 }
 section h2 {
   color: #3a6b4b;
@@ -250,9 +256,9 @@ footer {
   transform: scale(1.2);
 }
 @media (max-width: 800px) {
-  section, .carrossel {
+  .section-container {
     max-width: 98vw;
-    padding: 1rem;
+    padding: 1rem 0.5rem;
   }
   .slide, .slide img {
     height: 200px;
@@ -271,4 +277,9 @@ footer {
   .titulo-naturlu {
     font-size: 1.3rem;
   }
+}
+/* Remover padding e border-radius antigos das seções */
+section > *, #depoimentos > *, .carrossel > * {
+  margin-left: auto;
+  margin-right: auto;
 } 
