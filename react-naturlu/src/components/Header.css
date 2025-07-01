@@ -1,0 +1,57 @@
+.sticky-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #f6f8f4ee;
+  box-shadow: 0 2px 8px #0001;
+  backdrop-filter: blur(4px);
+}
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.2rem 2rem 1rem 2rem;
+}
+.titulo-naturlu {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: #2e4d36;
+  margin: 0;
+  letter-spacing: 1px;
+  line-height: 1.1;
+  word-break: break-word;
+}
+.titulo-naturlu span {
+  display: block;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 1.1rem;
+  color: #7bbf6a;
+  margin-top: 0.2em;
+}
+nav a {
+  color: #3a6b4b;
+  text-decoration: none;
+  margin: 0 1.2rem;
+  font-weight: 500;
+  font-size: 1.1rem;
+  transition: color 0.2s;
+}
+nav a:hover {
+  color: #7bbf6a;
+}
+@media (max-width: 800px) {
+  .header-container {
+    flex-direction: column;
+    gap: 0.7rem;
+    padding: 1rem 0.5rem 0.7rem 0.5rem;
+  }
+  .titulo-naturlu {
+    font-size: 1.2rem;
+  }
+  nav a {
+    margin: 0 0.5rem;
+    font-size: 1rem;
+  }
+} 

@@ -1,0 +1,35 @@
+.depoimentos-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: 1.2rem;
+}
+.card-depoimento {
+  background: #e3f2e1cc;
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px #0001;
+  padding: 1.2rem 1rem;
+  width: 210px;
+  text-align: center;
+  font-style: italic;
+  color: #2e4d36;
+  border: 1.5px solid #cbe7c2;
+}
+.card-depoimento span {
+  display: block;
+  margin-top: 0.7rem;
+  font-style: normal;
+  color: #3a6b4b;
+  font-size: 0.98rem;
+}
+@media (max-width: 800px) {
+  .depoimentos-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  .card-depoimento {
+    width: 95vw;
+    max-width: 320px;
+  }
+} 
