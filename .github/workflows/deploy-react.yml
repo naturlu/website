@@ -1,0 +1,25 @@
+name: Deploy React (Vite) to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./react-naturlu
+    steps:
+      - name: Checkout código
+        uses: actions/checkout@v4
+      - name: Instalar dependências
+        run: npm install
+      - name: Build do projeto
+        run: npm run build
+      - name: Deploy para o GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./react-naturlu/dist 
