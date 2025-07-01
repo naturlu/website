@@ -1,4 +1,4 @@
-name: Build static site to docs folder
+name: Build static site to root folder
 
 on:
   push:
@@ -23,15 +23,19 @@ jobs:
       - name: Build estático do Next.js
         run: npm run build
 
-      - name: Mover build para docs/
+      - name: Mover build para a root
         run: |
-          rm -rf docs
-          mv out docs
+          shopt -s dotglob
+          rm -rf !(out|.git|.github)
+          mv out/* .
+          mv out/.* . 2>/dev/null || true
+          rmdir out
+          touch .nojekyll
 
       - name: Commit e push do build
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add docs
-          git commit -m "Atualizar site estático em docs/" || echo "Sem alterações"
+          git add .
+          git commit -m "Atualizar site estático na root" || echo "Sem alterações"
           git push 
