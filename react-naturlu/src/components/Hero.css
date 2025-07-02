@@ -1,60 +1,82 @@
 .hero {
   position: relative;
   width: 100vw;
-  min-height: 60vh;
+  min-height: 70vh;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
   margin-bottom: 2rem;
+  background: linear-gradient(120deg, #e3f2e1 60%, #b7e4c7 100%);
 }
 .hero-bg {
   position: absolute;
   inset: 0;
-  background: linear-gradient(120deg, #e3f2e1 60%, #b7e4c7 100%);
+  background: inherit;
   opacity: 0.35;
   z-index: 1;
+  filter: blur(2px) brightness(0.95);
 }
 .hero-content {
   position: relative;
   z-index: 2;
   text-align: center;
-  padding: 3rem 1rem 2rem 1rem;
+  padding: 3rem 2rem 2rem 2rem;
+  background: rgba(255,255,255,0.7);
+  border-radius: 2rem;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.10);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  max-width: 600px;
+  margin: 0 auto;
 }
 .hero-content h2 {
   font-family: 'Playfair Display', serif;
-  font-size: 2.5rem;
+  font-size: 3rem;
   color: #2e4d36;
-  margin-bottom: 0.7rem;
-  text-shadow: 0 2px 8px #fff8;
+  margin-bottom: 1.2rem;
+  text-shadow: 0 2px 16px #fff8, 0 1px 2px #0001;
+  letter-spacing: 1px;
+  font-weight: 700;
 }
 .hero-content p {
-  font-size: 1.2rem;
+  font-size: 1.35rem;
   color: #2e4d36cc;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
+  line-height: 1.5;
 }
 .btn-hero {
   display: inline-block;
   background: linear-gradient(90deg, #7bbf6a 60%, #3a6b4b 100%);
   color: #fff;
-  font-weight: 600;
-  font-size: 1.1rem;
-  padding: 0.9rem 2.2rem;
+  font-weight: 700;
+  font-size: 1.2rem;
+  padding: 1.1rem 2.5rem;
   border-radius: 2rem;
   text-decoration: none;
-  box-shadow: 0 2px 12px #0002;
-  transition: background 0.2s, transform 0.2s;
+  box-shadow: 0 4px 24px #0002;
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+  letter-spacing: 0.5px;
 }
 .btn-hero:hover {
   background: linear-gradient(90deg, #3a6b4b 60%, #7bbf6a 100%);
-  transform: translateY(-2px) scale(1.04);
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 32px #0003;
 }
 @media (max-width: 800px) {
   .hero-content h2 {
-    font-size: 1.3rem;
+    font-size: 2rem;
+  }
+  .hero-content {
+    padding: 2rem 0.5rem 1.5rem 0.5rem;
+    border-radius: 1.2rem;
   }
   .hero {
-    min-height: 180px;
+    min-height: 40vh;
     margin-bottom: 1rem;
+  }
+  .btn-hero {
+    font-size: 1rem;
+    padding: 0.8rem 1.5rem;
   }
 } 
